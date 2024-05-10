@@ -9,12 +9,26 @@
 /* Begin PBXBuildFile section */
 		A70B3F562BEE329600B975B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70B3F552BEE329600B975B0 /* AppDelegate.swift */; };
 		A70B3F582BEE329600B975B0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70B3F572BEE329600B975B0 /* SceneDelegate.swift */; };
-		A70B3F5A2BEE329600B975B0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70B3F592BEE329600B975B0 /* ViewController.swift */; };
 		A70B3F5F2BEE329800B975B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A70B3F5E2BEE329800B975B0 /* Assets.xcassets */; };
 		A70B3F622BEE329800B975B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A70B3F602BEE329800B975B0 /* LaunchScreen.storyboard */; };
 		A70B3F6D2BEE329800B975B0 /* CronicaCloneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70B3F6C2BEE329800B975B0 /* CronicaCloneTests.swift */; };
 		A70B3F772BEE329800B975B0 /* CronicaCloneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70B3F762BEE329800B975B0 /* CronicaCloneUITests.swift */; };
 		A70B3F792BEE329800B975B0 /* CronicaCloneUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70B3F782BEE329800B975B0 /* CronicaCloneUITestsLaunchTests.swift */; };
+		A70B3F8E2BEE3F2E00B975B0 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70B3F8D2BEE3F2E00B975B0 /* Coordinator.swift */; };
+		A70B3F942BEE5BDA00B975B0 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70B3F932BEE5BDA00B975B0 /* AppCoordinator.swift */; };
+		A70B3F962BEE5FD300B975B0 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70B3F952BEE5FD300B975B0 /* HomeCoordinator.swift */; };
+		A70B3F9C2BEE73F800B975B0 /* DiscoverCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70B3F9B2BEE73F800B975B0 /* DiscoverCoordinator.swift */; };
+		A70B3FA02BEE743900B975B0 /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70B3F9F2BEE743900B975B0 /* DiscoverViewController.swift */; };
+		A70B3FA22BEE744C00B975B0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70B3FA12BEE744C00B975B0 /* HomeViewController.swift */; };
+		A70B3FA42BEE745300B975B0 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70B3FA32BEE745300B975B0 /* SearchViewController.swift */; };
+		A70B3FA62BEE747800B975B0 /* WatchlistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70B3FA52BEE747800B975B0 /* WatchlistViewController.swift */; };
+		A70B3FAC2BEE75E800B975B0 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70B3FAB2BEE75E800B975B0 /* HomeViewModel.swift */; };
+		A70B3FAE2BEE765E00B975B0 /* DiscoverViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70B3FAD2BEE765E00B975B0 /* DiscoverViewModel.swift */; };
+		A70B3FB02BEE766B00B975B0 /* WatchlistViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70B3FAF2BEE766B00B975B0 /* WatchlistViewModel.swift */; };
+		A70B3FB22BEE767600B975B0 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70B3FB12BEE767600B975B0 /* SearchViewModel.swift */; };
+		A70B3FB42BEE778D00B975B0 /* SearchCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70B3FB32BEE778D00B975B0 /* SearchCoordinator.swift */; };
+		A70B3FB62BEE779700B975B0 /* WatchlistCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70B3FB52BEE779700B975B0 /* WatchlistCoordinator.swift */; };
+		A70B3FB82BEEAAA900B975B0 /* ViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70B3FB72BEEAAA900B975B0 /* ViewControllerFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +52,6 @@
 		A70B3F522BEE329600B975B0 /* CronicaClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CronicaClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A70B3F552BEE329600B975B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A70B3F572BEE329600B975B0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A70B3F592BEE329600B975B0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A70B3F5E2BEE329800B975B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A70B3F612BEE329800B975B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A70B3F632BEE329800B975B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +60,21 @@
 		A70B3F722BEE329800B975B0 /* CronicaCloneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CronicaCloneUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A70B3F762BEE329800B975B0 /* CronicaCloneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CronicaCloneUITests.swift; sourceTree = "<group>"; };
 		A70B3F782BEE329800B975B0 /* CronicaCloneUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CronicaCloneUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A70B3F8D2BEE3F2E00B975B0 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		A70B3F932BEE5BDA00B975B0 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		A70B3F952BEE5FD300B975B0 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		A70B3F9B2BEE73F800B975B0 /* DiscoverCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverCoordinator.swift; sourceTree = "<group>"; };
+		A70B3F9F2BEE743900B975B0 /* DiscoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
+		A70B3FA12BEE744C00B975B0 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		A70B3FA32BEE745300B975B0 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		A70B3FA52BEE747800B975B0 /* WatchlistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchlistViewController.swift; sourceTree = "<group>"; };
+		A70B3FAB2BEE75E800B975B0 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		A70B3FAD2BEE765E00B975B0 /* DiscoverViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverViewModel.swift; sourceTree = "<group>"; };
+		A70B3FAF2BEE766B00B975B0 /* WatchlistViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchlistViewModel.swift; sourceTree = "<group>"; };
+		A70B3FB12BEE767600B975B0 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		A70B3FB32BEE778D00B975B0 /* SearchCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCoordinator.swift; sourceTree = "<group>"; };
+		A70B3FB52BEE779700B975B0 /* WatchlistCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchlistCoordinator.swift; sourceTree = "<group>"; };
+		A70B3FB72BEEAAA900B975B0 /* ViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,7 +128,7 @@
 				A70B3F8B2BEE34EC00B975B0 /* App */,
 				A70B3F8A2BEE34E400B975B0 /* Features */,
 				A70B3F892BEE34DF00B975B0 /* Views */,
-				A70B3F8C2BEE351600B975B0 /* Coordinators */,
+				A70B3F8C2BEE351600B975B0 /* Coordinator */,
 				A70B3F882BEE34DA00B975B0 /* Models */,
 				A70B3F872BEE34D400B975B0 /* Services */,
 				A70B3F862BEE34D000B975B0 /* Resources */,
@@ -166,7 +194,10 @@
 		A70B3F8A2BEE34E400B975B0 /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				A70B3F592BEE329600B975B0 /* ViewController.swift */,
+				A70B3FA72BEE748800B975B0 /* Home */,
+				A70B3FAA2BEE749A00B975B0 /* Discover */,
+				A70B3FA92BEE749200B975B0 /* Watchlist */,
+				A70B3FA82BEE748D00B975B0 /* Search */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -181,11 +212,54 @@
 			path = App;
 			sourceTree = "<group>";
 		};
-		A70B3F8C2BEE351600B975B0 /* Coordinators */ = {
+		A70B3F8C2BEE351600B975B0 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
+				A70B3F8D2BEE3F2E00B975B0 /* Coordinator.swift */,
+				A70B3F932BEE5BDA00B975B0 /* AppCoordinator.swift */,
+				A70B3F952BEE5FD300B975B0 /* HomeCoordinator.swift */,
+				A70B3F9B2BEE73F800B975B0 /* DiscoverCoordinator.swift */,
+				A70B3FB32BEE778D00B975B0 /* SearchCoordinator.swift */,
+				A70B3FB52BEE779700B975B0 /* WatchlistCoordinator.swift */,
+				A70B3FB72BEEAAA900B975B0 /* ViewControllerFactory.swift */,
 			);
-			path = Coordinators;
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		A70B3FA72BEE748800B975B0 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				A70B3FA12BEE744C00B975B0 /* HomeViewController.swift */,
+				A70B3FAB2BEE75E800B975B0 /* HomeViewModel.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		A70B3FA82BEE748D00B975B0 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				A70B3FA32BEE745300B975B0 /* SearchViewController.swift */,
+				A70B3FB12BEE767600B975B0 /* SearchViewModel.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		A70B3FA92BEE749200B975B0 /* Watchlist */ = {
+			isa = PBXGroup;
+			children = (
+				A70B3FA52BEE747800B975B0 /* WatchlistViewController.swift */,
+				A70B3FAF2BEE766B00B975B0 /* WatchlistViewModel.swift */,
+			);
+			path = Watchlist;
+			sourceTree = "<group>";
+		};
+		A70B3FAA2BEE749A00B975B0 /* Discover */ = {
+			isa = PBXGroup;
+			children = (
+				A70B3F9F2BEE743900B975B0 /* DiscoverViewController.swift */,
+				A70B3FAD2BEE765E00B975B0 /* DiscoverViewModel.swift */,
+			);
+			path = Discover;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -318,9 +392,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A70B3F5A2BEE329600B975B0 /* ViewController.swift in Sources */,
+				A70B3F942BEE5BDA00B975B0 /* AppCoordinator.swift in Sources */,
+				A70B3FB42BEE778D00B975B0 /* SearchCoordinator.swift in Sources */,
+				A70B3FB02BEE766B00B975B0 /* WatchlistViewModel.swift in Sources */,
+				A70B3FAC2BEE75E800B975B0 /* HomeViewModel.swift in Sources */,
+				A70B3F8E2BEE3F2E00B975B0 /* Coordinator.swift in Sources */,
 				A70B3F562BEE329600B975B0 /* AppDelegate.swift in Sources */,
+				A70B3FA42BEE745300B975B0 /* SearchViewController.swift in Sources */,
+				A70B3FB82BEEAAA900B975B0 /* ViewControllerFactory.swift in Sources */,
+				A70B3FA22BEE744C00B975B0 /* HomeViewController.swift in Sources */,
 				A70B3F582BEE329600B975B0 /* SceneDelegate.swift in Sources */,
+				A70B3FB22BEE767600B975B0 /* SearchViewModel.swift in Sources */,
+				A70B3FA62BEE747800B975B0 /* WatchlistViewController.swift in Sources */,
+				A70B3F962BEE5FD300B975B0 /* HomeCoordinator.swift in Sources */,
+				A70B3FB62BEE779700B975B0 /* WatchlistCoordinator.swift in Sources */,
+				A70B3FAE2BEE765E00B975B0 /* DiscoverViewModel.swift in Sources */,
+				A70B3FA02BEE743900B975B0 /* DiscoverViewController.swift in Sources */,
+				A70B3F9C2BEE73F800B975B0 /* DiscoverCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
