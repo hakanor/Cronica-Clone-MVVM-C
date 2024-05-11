@@ -26,9 +26,7 @@ class SearchCoordinator: SearchCoordinating {
     }
     
     private func showSearchViewController() {
-        let searchCoordinator = SearchCoordinator(UINavigationController())
-        self.childCoordinators.append(searchCoordinator)
-        let viewModel = SearchViewModel(coordinator: searchCoordinator)
+        let viewModel = SearchViewModel(coordinator: self)
         let viewController = SearchViewController(viewModel: viewModel)
         viewController.tabBarItem = TabBarItemFactory.createTabbarItem(screenType: .search)
         navigationController.pushViewController(viewController, animated: true)

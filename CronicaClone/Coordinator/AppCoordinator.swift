@@ -29,21 +29,26 @@ class AppCoordinator: AppCordinating {
     }
     
     func showMainScreen() {
-        // TODO: - Show main screen
-        let screens: [ScreenType] = [.home, .discover, .watchlist, .search]
-//        tabBarController.viewControllers = screens.map { ViewControllerFactory.viewController(coordinatorType: $0, self)}
         
+        // Create coordinators for tabbar
         let homeCoordinator = HomeCoordinator(UINavigationController())
-        homeCoordinator.start()
-        childCoordinators.append(homeCoordinator)
-        
         let discoverCoordinator = DiscoverCoordinator(UINavigationController())
-        discoverCoordinator.start()
-        childCoordinators.append(discoverCoordinator)
+        let watchlistCoordinator = WatchlistCoordinator(UINavigationController())
+        let searchCoordinator = SearchCoordinator(UINavigationController())
         
-        tabBarController.viewControllers = [homeCoordinator.navigationController, discoverCoordinator.navigationController]
+        let tabbarCoordinators: [Coordinator] = [homeCoordinator, discoverCoordinator, watchlistCoordinator, searchCoordinator]
         
+        tabbarCoordinators.forEach { (coordinator: Coordinator) in
+            // start coordinators
+            coordinator.start()
+            // append coordinators to parent coordinator
+            childCoordinators.append(coordinator)
+        }
         
+        // append coordinator navigationController to tabbar's viewControllers
+        tabBarController.viewControllers = tabbarCoordinators.map { $0.navigationController }
+        
+        //tabbar customization
         tabBarController.tabBar.backgroundColor = .systemBackground
         navigationController.viewControllers = [tabBarController]
     }

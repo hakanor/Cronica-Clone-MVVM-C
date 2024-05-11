@@ -26,8 +26,6 @@ class HomeCoordinator: HomeCoordinating {
     }
     
     private func showHomeViewController() {
-        let homeCoordinator = HomeCoordinator(UINavigationController())
-        self.childCoordinators.append(homeCoordinator)
         let viewModel = HomeViewModel(coordinator: self)
         let viewController = HomeViewController(viewModel: viewModel)
         viewController.tabBarItem = TabBarItemFactory.createTabbarItem(screenType: .home)

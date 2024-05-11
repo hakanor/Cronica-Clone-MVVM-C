@@ -26,9 +26,7 @@ class WatchlistCoordinator: WatchlistCoordinating {
     }
     
     private func showWatchlistViewController() {
-        let watchlistCoordinator = WatchlistCoordinator(UINavigationController())
-        self.childCoordinators.append(watchlistCoordinator)
-        let viewModel = WatchlistViewModel(coordinator: watchlistCoordinator)
+        let viewModel = WatchlistViewModel(coordinator: self)
         let viewController = WatchlistViewController(viewModel: viewModel)
         viewController.tabBarItem = TabBarItemFactory.createTabbarItem(screenType: .watchlist)
         navigationController.pushViewController(viewController, animated: true)

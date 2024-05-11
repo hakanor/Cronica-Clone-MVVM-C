@@ -26,9 +26,7 @@ class DiscoverCoordinator: DiscoverCoordinating {
     }
     
     private func showDiscoverViewController() {
-        let discoverCoordinator = DiscoverCoordinator(UINavigationController())
-        self.childCoordinators.append(discoverCoordinator)
-        let viewModel = DiscoverViewModel(coordinator: discoverCoordinator)
+        let viewModel = DiscoverViewModel(coordinator: self)
         let viewController = DiscoverViewController(viewModel: viewModel)
         viewController.tabBarItem = TabBarItemFactory.createTabbarItem(screenType: .discover)
         navigationController.pushViewController(viewController, animated: true)
