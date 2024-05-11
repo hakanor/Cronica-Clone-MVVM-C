@@ -31,13 +31,12 @@ class AppCoordinator: AppCordinating {
     func showMainScreen() {
         
         // Create coordinators for tabbar
-        let homeCoordinator = HomeCoordinator(UINavigationController())
-        let discoverCoordinator = DiscoverCoordinator(UINavigationController())
-        let watchlistCoordinator = WatchlistCoordinator(UINavigationController())
-        let searchCoordinator = SearchCoordinator(UINavigationController())
+        let homeCoordinator = HomeCoordinator(navigationController)
+        let discoverCoordinator = DiscoverCoordinator(navigationController)
+        let watchlistCoordinator = WatchlistCoordinator(navigationController)
+        let searchCoordinator = SearchCoordinator(navigationController)
         
         let tabbarCoordinators: [Coordinator] = [homeCoordinator, discoverCoordinator, watchlistCoordinator, searchCoordinator]
-        
         tabbarCoordinators.forEach { (coordinator: Coordinator) in
             // start coordinators
             coordinator.start()
@@ -45,8 +44,8 @@ class AppCoordinator: AppCordinating {
             childCoordinators.append(coordinator)
         }
         
-        // append coordinator navigationController to tabbar's viewControllers
-        tabBarController.viewControllers = tabbarCoordinators.map { $0.navigationController }
+        // set tabBarController's viewControllers
+        tabBarController.viewControllers = navigationController.viewControllers
         
         tabBarController.tabBar.backgroundColor = .systemBackground
         navigationController.viewControllers = [tabBarController]

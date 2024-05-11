@@ -29,7 +29,7 @@ class HomeCoordinator: HomeCoordinating {
         let viewModel = HomeViewModel(coordinator: self)
         let viewController = HomeViewController(viewModel: viewModel)
         viewController.tabBarItem = TabBarItemFactory.createTabbarItem(screenType: .home)
-        navigationController.pushViewController(viewController, animated: true)
+        navigationController.viewControllers.append(viewController)
     }
     
     func showMovieDetailView(with movie: String) {

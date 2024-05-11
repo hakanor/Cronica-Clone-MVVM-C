@@ -36,7 +36,7 @@ final class MovieDetailViewController: UIViewController {
     
     // MARK: - Methods
     private func configureUI() {
-        view.backgroundColor = .systemPink.withAlphaComponent(0.5)
+        view.backgroundColor = .systemPink
         view.addSubview(label)
         NSLayoutConstraint.activate([
             label.centerXAnchor.constraint(equalTo: view.centerXAnchor),
