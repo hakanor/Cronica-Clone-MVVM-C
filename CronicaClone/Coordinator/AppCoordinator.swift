@@ -48,7 +48,6 @@ class AppCoordinator: AppCordinating {
         // append coordinator navigationController to tabbar's viewControllers
         tabBarController.viewControllers = tabbarCoordinators.map { $0.navigationController }
         
-        //tabbar customization
         tabBarController.tabBar.backgroundColor = .systemBackground
         navigationController.viewControllers = [tabBarController]
     }

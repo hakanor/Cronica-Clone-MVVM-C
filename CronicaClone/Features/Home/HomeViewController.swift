@@ -12,6 +12,13 @@ final class HomeViewController: UIViewController {
     let viewModel: HomeViewModelInterface
     
     // MARK: - Subviews
+    private lazy var button: UIButton = {
+        let button = UIButton(type: .system)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitle("Button", for: .normal)
+        button.addTarget(self, action: #selector(buttonTapped(_:)), for: .touchUpInside)
+        return button
+    }()
     
     // MARK: - Life Cycle
     init(viewModel: HomeViewModelInterface) {
@@ -26,9 +33,20 @@ final class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .yellow
+        configureUI()
     }
     
     // MARK: - Functions
+    private func configureUI() {
+        view.addSubview(button)
+        NSLayoutConstraint.activate([
+            button.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            button.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+        ])
+    }
     
     // MARK: - Selectors
+    @objc func buttonTapped(_ sender: UIButton) {
+        viewModel.showMovieDetail(with: "TestString")
+    }
 }

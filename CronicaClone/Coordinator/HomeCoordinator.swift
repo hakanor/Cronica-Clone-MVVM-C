@@ -8,7 +8,7 @@
 import UIKit
 
 protocol HomeCoordinating: Coordinator {
-    
+    func showMovieDetailView(with movie: String)
 }
 
 class HomeCoordinator: HomeCoordinating {
@@ -30,5 +30,11 @@ class HomeCoordinator: HomeCoordinating {
         let viewController = HomeViewController(viewModel: viewModel)
         viewController.tabBarItem = TabBarItemFactory.createTabbarItem(screenType: .home)
         navigationController.pushViewController(viewController, animated: true)
+    }
+    
+    func showMovieDetailView(with movie: String) {
+        let movieDetailCoordinator = MovieDetailCoordinator(navigationController, movie: movie)
+        childCoordinators.append(movieDetailCoordinator)
+        movieDetailCoordinator.start()
     }
 }

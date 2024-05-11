@@ -11,7 +11,7 @@ protocol HomeViewModelDelegate: AnyObject {
 }
 
 protocol HomeViewModelInterface {
-    
+    func showMovieDetail(with movie: String)
 }
 
 final class HomeViewModel: HomeViewModelInterface {
@@ -21,11 +21,9 @@ final class HomeViewModel: HomeViewModelInterface {
     
     init(coordinator: HomeCoordinating) {
         self.coordinator = coordinator
-        test()
     }
     
-    func test() {
-
+    func showMovieDetail(with movie: String) {
+        coordinator?.showMovieDetailView(with: movie)
     }
-    
 }
