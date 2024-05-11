@@ -7,19 +7,26 @@
 
 import Foundation
 
-//protocol ActorDetailViewModelDelegate: AnyObject {
-//}
-//
-//protocol ActorDetailViewModelInterface {
-//    
-//}
-//
-//final class ActorDetailViewModel: ActorDetailViewModelInterface {
-//    
-//    weak var coordinator: ActorDetailCoordinating?
-//    weak var delegate: ActorDetailViewModelDelegate?
-//    
-//    init(coordinator: ActorDetailCoordinating) {
-//        self.coordinator = coordinator
-//    }
-//}
+protocol ActorDetailViewModelDelegate: AnyObject {
+}
+
+protocol ActorDetailViewModelInterface {
+    var actor: String? { get set }
+}
+
+final class ActorDetailViewModel: ActorDetailViewModelInterface {
+    
+    weak var coordinator: ActorDetailCoordinating?
+    weak var delegate: ActorDetailViewModelDelegate?
+    
+    var actor: String?
+    
+    init(coordinator: ActorDetailCoordinating) {
+        self.coordinator = coordinator
+    }
+    
+    deinit {
+        coordinator?.didFinish()
+        print(#fileID + " deinit")
+    }
+}

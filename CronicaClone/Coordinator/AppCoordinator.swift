@@ -16,6 +16,7 @@ class AppCoordinator: AppCordinating {
     var navigationController: UINavigationController
     
     var childCoordinators: [Coordinator] = []
+    var parentCoordinator: Coordinator?
 
     private var tabBarController: UITabBarController
     
@@ -31,11 +32,22 @@ class AppCoordinator: AppCordinating {
     func showMainScreen() {
         
         // Create coordinators for tabbar
-        let homeCoordinator = HomeCoordinator(navigationController)
-        let discoverCoordinator = DiscoverCoordinator(navigationController)
-        let watchlistCoordinator = WatchlistCoordinator(navigationController)
-        let searchCoordinator = SearchCoordinator(navigationController)
-        
+        let homeNavigationController = UINavigationController()
+        homeNavigationController.tabBarItem = TabBarItemFactory.createTabbarItem(screenType: .home)
+        let homeCoordinator = HomeCoordinator(homeNavigationController)
+
+        let discoverNavigationController = UINavigationController()
+        discoverNavigationController.tabBarItem = TabBarItemFactory.createTabbarItem(screenType: .discover)
+        let discoverCoordinator = DiscoverCoordinator(discoverNavigationController)
+
+        let watchlistNavigationController = UINavigationController()
+        watchlistNavigationController.tabBarItem = TabBarItemFactory.createTabbarItem(screenType: .watchlist)
+        let watchlistCoordinator = WatchlistCoordinator(watchlistNavigationController)
+
+        let searchNavigationController = UINavigationController()
+        searchNavigationController.tabBarItem = TabBarItemFactory.createTabbarItem(screenType: .search)
+        let searchCoordinator = SearchCoordinator(searchNavigationController)
+
         let tabbarCoordinators: [Coordinator] = [homeCoordinator, discoverCoordinator, watchlistCoordinator, searchCoordinator]
         tabbarCoordinators.forEach { (coordinator: Coordinator) in
             // start coordinators
@@ -45,9 +57,14 @@ class AppCoordinator: AppCordinating {
         }
         
         // set tabBarController's viewControllers
-        tabBarController.viewControllers = navigationController.viewControllers
+        tabBarController.viewControllers = [homeNavigationController, discoverNavigationController, watchlistNavigationController, searchNavigationController]
         
         tabBarController.tabBar.backgroundColor = .systemBackground
-        navigationController.viewControllers = [tabBarController]
+        navigationController.pushViewController(tabBarController, animated: true)
+        navigationController.setNavigationBarHidden(true, animated: true)
+    }
+    
+    deinit {
+        print(#fileID + " deinit")
     }
 }

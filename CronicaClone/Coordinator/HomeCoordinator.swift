@@ -16,6 +16,7 @@ class HomeCoordinator: HomeCoordinating {
     var navigationController: UINavigationController
     
     var childCoordinators: [Coordinator] = []
+    var parentCoordinator: Coordinator?
 
     init(_ navigationController: UINavigationController) {
         self.navigationController = navigationController
@@ -28,13 +29,17 @@ class HomeCoordinator: HomeCoordinating {
     private func showHomeViewController() {
         let viewModel = HomeViewModel(coordinator: self)
         let viewController = HomeViewController(viewModel: viewModel)
-        viewController.tabBarItem = TabBarItemFactory.createTabbarItem(screenType: .home)
         navigationController.viewControllers.append(viewController)
     }
     
     func showMovieDetailView(with movie: String) {
         let movieDetailCoordinator = MovieDetailCoordinator(navigationController, movie: movie)
+        movieDetailCoordinator.parentCoordinator = self
         childCoordinators.append(movieDetailCoordinator)
         movieDetailCoordinator.start()
+    }
+    
+    deinit {
+        print(#fileID + " deinit")
     }
 }

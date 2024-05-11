@@ -16,6 +16,7 @@ class DiscoverCoordinator: DiscoverCoordinating {
     var navigationController: UINavigationController
     
     var childCoordinators: [Coordinator] = []
+    var parentCoordinator: Coordinator?
     
     init(_ navigationController: UINavigationController) {
         self.navigationController = navigationController
@@ -28,7 +29,10 @@ class DiscoverCoordinator: DiscoverCoordinating {
     private func showDiscoverViewController() {
         let viewModel = DiscoverViewModel(coordinator: self)
         let viewController = DiscoverViewController(viewModel: viewModel)
-        viewController.tabBarItem = TabBarItemFactory.createTabbarItem(screenType: .discover)
         navigationController.viewControllers.append(viewController)
+    }
+    
+    deinit {
+        print(#fileID + " deinit")
     }
 }

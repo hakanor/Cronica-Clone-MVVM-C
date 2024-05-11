@@ -24,4 +24,9 @@ final class MovieDetailViewModel: MovieDetailViewModelInterface {
     init(coordinator: MovieDetailCoordinating) {
         self.coordinator = coordinator
     }
+    
+    deinit {
+        coordinator?.didFinish()
+        print(#fileID + " deinit")
+    }
 }

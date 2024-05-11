@@ -16,6 +16,7 @@ class SearchCoordinator: SearchCoordinating {
     var navigationController: UINavigationController
     
     var childCoordinators: [Coordinator] = []
+    var parentCoordinator: Coordinator?
     
     init(_ navigationController: UINavigationController) {
         self.navigationController = navigationController
@@ -28,7 +29,10 @@ class SearchCoordinator: SearchCoordinating {
     private func showSearchViewController() {
         let viewModel = SearchViewModel(coordinator: self)
         let viewController = SearchViewController(viewModel: viewModel)
-        viewController.tabBarItem = TabBarItemFactory.createTabbarItem(screenType: .search)
         navigationController.viewControllers.append(viewController)
+    }
+    
+    deinit {
+        print(#fileID + " deinit")
     }
 }

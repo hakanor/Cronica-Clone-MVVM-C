@@ -34,8 +34,9 @@
 		A7FE4E7B2BEFC44100D20323 /* ActorDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FE4E7A2BEFC44100D20323 /* ActorDetailViewController.swift */; };
 		A7FE4E7D2BEFC44C00D20323 /* MovieDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FE4E7C2BEFC44C00D20323 /* MovieDetailViewModel.swift */; };
 		A7FE4E7F2BEFC45400D20323 /* ActorDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FE4E7E2BEFC45400D20323 /* ActorDetailViewModel.swift */; };
-		A7FE4E822BEFC55700D20323 /* DetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FE4E812BEFC55700D20323 /* DetailCoordinator.swift */; };
+		A7FE4E822BEFC55700D20323 /* MovieDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FE4E812BEFC55700D20323 /* MovieDetailCoordinator.swift */; };
 		A7FE4E842BEFCFB500D20323 /* MovieDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FE4E832BEFCFB500D20323 /* MovieDetail.swift */; };
+		A7FE4E882BF00C0500D20323 /* ActorDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FE4E872BF00C0500D20323 /* ActorDetailCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,8 +88,9 @@
 		A7FE4E7A2BEFC44100D20323 /* ActorDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActorDetailViewController.swift; sourceTree = "<group>"; };
 		A7FE4E7C2BEFC44C00D20323 /* MovieDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewModel.swift; sourceTree = "<group>"; };
 		A7FE4E7E2BEFC45400D20323 /* ActorDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActorDetailViewModel.swift; sourceTree = "<group>"; };
-		A7FE4E812BEFC55700D20323 /* DetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCoordinator.swift; sourceTree = "<group>"; };
+		A7FE4E812BEFC55700D20323 /* MovieDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailCoordinator.swift; sourceTree = "<group>"; };
 		A7FE4E832BEFCFB500D20323 /* MovieDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetail.swift; sourceTree = "<group>"; };
+		A7FE4E872BF00C0500D20323 /* ActorDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActorDetailCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -232,7 +234,8 @@
 				A70B3FB52BEE779700B975B0 /* WatchlistCoordinator.swift */,
 				A70B3FF72BEEE2A900B975B0 /* TabBarItemFactory.swift */,
 				A70B3FF92BEEE2CA00B975B0 /* ScreenType.swift */,
-				A7FE4E812BEFC55700D20323 /* DetailCoordinator.swift */,
+				A7FE4E812BEFC55700D20323 /* MovieDetailCoordinator.swift */,
+				A7FE4E872BF00C0500D20323 /* ActorDetailCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -421,6 +424,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7FE4E882BF00C0500D20323 /* ActorDetailCoordinator.swift in Sources */,
 				A70B3F942BEE5BDA00B975B0 /* AppCoordinator.swift in Sources */,
 				A70B3FB42BEE778D00B975B0 /* SearchCoordinator.swift in Sources */,
 				A70B3FB02BEE766B00B975B0 /* WatchlistViewModel.swift in Sources */,
@@ -434,7 +438,7 @@
 				A70B3FA22BEE744C00B975B0 /* HomeViewController.swift in Sources */,
 				A70B3F582BEE329600B975B0 /* SceneDelegate.swift in Sources */,
 				A70B3FB22BEE767600B975B0 /* SearchViewModel.swift in Sources */,
-				A7FE4E822BEFC55700D20323 /* DetailCoordinator.swift in Sources */,
+				A7FE4E822BEFC55700D20323 /* MovieDetailCoordinator.swift in Sources */,
 				A70B3FA62BEE747800B975B0 /* WatchlistViewController.swift in Sources */,
 				A7FE4E842BEFCFB500D20323 /* MovieDetail.swift in Sources */,
 				A70B3F962BEE5FD300B975B0 /* HomeCoordinator.swift in Sources */,
