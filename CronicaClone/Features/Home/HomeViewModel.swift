@@ -21,6 +21,11 @@ final class HomeViewModel: HomeViewModelInterface {
     
     init(coordinator: HomeCoordinating) {
         self.coordinator = coordinator
+        test()
+    }
+    
+    func test() {
+
     }
     
 }

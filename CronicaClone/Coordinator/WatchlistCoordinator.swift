@@ -8,7 +8,7 @@
 import UIKit
 
 protocol WatchlistCoordinating: Coordinator {
-    func showWatchlistViewController()
+      
 }
 
 class WatchlistCoordinator: WatchlistCoordinating {
@@ -17,25 +17,20 @@ class WatchlistCoordinator: WatchlistCoordinating {
     
     var childCoordinators: [Coordinator] = []
     
-    var type: CoordinatorType = .watchlist
-    
-    var finishDelegate: CoordinatorFinishDelegate?
-    
-    var tabBarItem: UITabBarItem
-    
-    private let viewFactory = ViewControllerFactory()
-    
-    init(_ navigationController: UINavigationController, tabBarItem: UITabBarItem) {
+    init(_ navigationController: UINavigationController) {
         self.navigationController = navigationController
-        self.tabBarItem = tabBarItem
     }
     
     func start() {
         showWatchlistViewController()
     }
     
-    func showWatchlistViewController() {
-        let vc = viewFactory.viewController(coordinatorType: .watchlist, self)
-        navigationController.pushViewController(vc, animated: true)
+    private func showWatchlistViewController() {
+        let watchlistCoordinator = WatchlistCoordinator(UINavigationController())
+        self.childCoordinators.append(watchlistCoordinator)
+        let viewModel = WatchlistViewModel(coordinator: watchlistCoordinator)
+        let viewController = WatchlistViewController(viewModel: viewModel)
+        viewController.tabBarItem = TabBarItemFactory.createTabbarItem(screenType: .watchlist)
+        navigationController.pushViewController(viewController, animated: true)
     }
 }

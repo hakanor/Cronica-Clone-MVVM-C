@@ -10,7 +10,6 @@ import UIKit
 class WatchlistViewController: UIViewController {
     // MARK: - Properties
     let viewModel: WatchlistViewModelInterface
-    weak var coordinator: Coordinator?
     
     // MARK: - Subviews
     

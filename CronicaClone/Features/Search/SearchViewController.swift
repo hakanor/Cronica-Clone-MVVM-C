@@ -10,7 +10,6 @@ import UIKit
 class SearchViewController: UIViewController {
     // MARK: - Properties
     let viewModel: SearchViewModelInterface
-    weak var coordinator: Coordinator?
     
     // MARK: - Subviews
     

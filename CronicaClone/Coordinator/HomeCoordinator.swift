@@ -8,7 +8,7 @@
 import UIKit
 
 protocol HomeCoordinating: Coordinator {
-    func showHomeViewController()
+    
 }
 
 class HomeCoordinator: HomeCoordinating {
@@ -16,26 +16,21 @@ class HomeCoordinator: HomeCoordinating {
     var navigationController: UINavigationController
     
     var childCoordinators: [Coordinator] = []
-    
-    var type: CoordinatorType = .home
-    
-    var finishDelegate: CoordinatorFinishDelegate?
-    
-    var tabBarItem: UITabBarItem
-    
-    private let viewFactory = ViewControllerFactory()
-    
-    init(_ navigationController: UINavigationController, tabBarItem: UITabBarItem) {
+
+    init(_ navigationController: UINavigationController) {
         self.navigationController = navigationController
-        self.tabBarItem = tabBarItem
     }
     
     func start() {
         showHomeViewController()
     }
     
-    func showHomeViewController() {
-        let vc = viewFactory.viewController(coordinatorType: .home, self)
-        navigationController.pushViewController(vc, animated: true)
+    private func showHomeViewController() {
+        let homeCoordinator = HomeCoordinator(UINavigationController())
+        self.childCoordinators.append(homeCoordinator)
+        let viewModel = HomeViewModel(coordinator: self)
+        let viewController = HomeViewController(viewModel: viewModel)
+        viewController.tabBarItem = TabBarItemFactory.createTabbarItem(screenType: .home)
+        navigationController.pushViewController(viewController, animated: true)
     }
 }

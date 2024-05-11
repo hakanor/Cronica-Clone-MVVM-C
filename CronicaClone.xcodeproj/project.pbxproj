@@ -29,6 +29,8 @@
 		A70B3FB42BEE778D00B975B0 /* SearchCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70B3FB32BEE778D00B975B0 /* SearchCoordinator.swift */; };
 		A70B3FB62BEE779700B975B0 /* WatchlistCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70B3FB52BEE779700B975B0 /* WatchlistCoordinator.swift */; };
 		A70B3FB82BEEAAA900B975B0 /* ViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70B3FB72BEEAAA900B975B0 /* ViewControllerFactory.swift */; };
+		A70B3FF82BEEE2A900B975B0 /* TabBarItemFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70B3FF72BEEE2A900B975B0 /* TabBarItemFactory.swift */; };
+		A70B3FFA2BEEE2CA00B975B0 /* ScreenType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70B3FF92BEEE2CA00B975B0 /* ScreenType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +77,8 @@
 		A70B3FB32BEE778D00B975B0 /* SearchCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCoordinator.swift; sourceTree = "<group>"; };
 		A70B3FB52BEE779700B975B0 /* WatchlistCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchlistCoordinator.swift; sourceTree = "<group>"; };
 		A70B3FB72BEEAAA900B975B0 /* ViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerFactory.swift; sourceTree = "<group>"; };
+		A70B3FF72BEEE2A900B975B0 /* TabBarItemFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItemFactory.swift; sourceTree = "<group>"; };
+		A70B3FF92BEEE2CA00B975B0 /* ScreenType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,7 +131,6 @@
 			children = (
 				A70B3F8B2BEE34EC00B975B0 /* App */,
 				A70B3F8A2BEE34E400B975B0 /* Features */,
-				A70B3F892BEE34DF00B975B0 /* Views */,
 				A70B3F8C2BEE351600B975B0 /* Coordinator */,
 				A70B3F882BEE34DA00B975B0 /* Models */,
 				A70B3F872BEE34D400B975B0 /* Services */,
@@ -184,13 +187,6 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		A70B3F892BEE34DF00B975B0 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 		A70B3F8A2BEE34E400B975B0 /* Features */ = {
 			isa = PBXGroup;
 			children = (
@@ -222,6 +218,8 @@
 				A70B3FB32BEE778D00B975B0 /* SearchCoordinator.swift */,
 				A70B3FB52BEE779700B975B0 /* WatchlistCoordinator.swift */,
 				A70B3FB72BEEAAA900B975B0 /* ViewControllerFactory.swift */,
+				A70B3FF72BEEE2A900B975B0 /* TabBarItemFactory.swift */,
+				A70B3FF92BEEE2CA00B975B0 /* ScreenType.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -399,6 +397,7 @@
 				A70B3F8E2BEE3F2E00B975B0 /* Coordinator.swift in Sources */,
 				A70B3F562BEE329600B975B0 /* AppDelegate.swift in Sources */,
 				A70B3FA42BEE745300B975B0 /* SearchViewController.swift in Sources */,
+				A70B3FF82BEEE2A900B975B0 /* TabBarItemFactory.swift in Sources */,
 				A70B3FB82BEEAAA900B975B0 /* ViewControllerFactory.swift in Sources */,
 				A70B3FA22BEE744C00B975B0 /* HomeViewController.swift in Sources */,
 				A70B3F582BEE329600B975B0 /* SceneDelegate.swift in Sources */,
@@ -408,6 +407,7 @@
 				A70B3FB62BEE779700B975B0 /* WatchlistCoordinator.swift in Sources */,
 				A70B3FAE2BEE765E00B975B0 /* DiscoverViewModel.swift in Sources */,
 				A70B3FA02BEE743900B975B0 /* DiscoverViewController.swift in Sources */,
+				A70B3FFA2BEEE2CA00B975B0 /* ScreenType.swift in Sources */,
 				A70B3F9C2BEE73F800B975B0 /* DiscoverCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

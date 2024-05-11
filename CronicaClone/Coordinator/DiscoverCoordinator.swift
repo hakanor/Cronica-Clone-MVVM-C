@@ -8,7 +8,7 @@
 import UIKit
 
 protocol DiscoverCoordinating: Coordinator {
-    func showDiscoverViewController()
+    
 }
 
 class DiscoverCoordinator: DiscoverCoordinating {
@@ -17,25 +17,20 @@ class DiscoverCoordinator: DiscoverCoordinating {
     
     var childCoordinators: [Coordinator] = []
     
-    var type: CoordinatorType = .discover
-    
-    var finishDelegate: CoordinatorFinishDelegate?
-    
-    var tabBarItem: UITabBarItem
-    
-    private let viewFactory = ViewControllerFactory()
-    
-    init(_ navigationController: UINavigationController, tabBarItem: UITabBarItem) {
+    init(_ navigationController: UINavigationController) {
         self.navigationController = navigationController
-        self.tabBarItem = tabBarItem
     }
     
     func start() {
         showDiscoverViewController()
     }
     
-    func showDiscoverViewController() {
-        let vc = viewFactory.viewController(coordinatorType: .discover, self)
-        navigationController.pushViewController(vc, animated: true)
+    private func showDiscoverViewController() {
+        let discoverCoordinator = DiscoverCoordinator(UINavigationController())
+        self.childCoordinators.append(discoverCoordinator)
+        let viewModel = DiscoverViewModel(coordinator: discoverCoordinator)
+        let viewController = DiscoverViewController(viewModel: viewModel)
+        viewController.tabBarItem = TabBarItemFactory.createTabbarItem(screenType: .discover)
+        navigationController.pushViewController(viewController, animated: true)
     }
 }

@@ -10,7 +10,6 @@ import UIKit
 final class HomeViewController: UIViewController {
     // MARK: - Properties
     let viewModel: HomeViewModelInterface
-    weak var coordinator: Coordinator?
     
     // MARK: - Subviews
     

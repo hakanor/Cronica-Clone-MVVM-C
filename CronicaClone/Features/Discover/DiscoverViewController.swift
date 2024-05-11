@@ -10,7 +10,6 @@ import UIKit
 class DiscoverViewController: UIViewController {
     // MARK: - Properties
     let viewModel: DiscoverViewModelInterface
-    weak var coordinator: Coordinator?
     
     // MARK: - Subviews
     

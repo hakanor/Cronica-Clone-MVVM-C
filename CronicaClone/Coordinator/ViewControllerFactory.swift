@@ -7,36 +7,41 @@
 
 import UIKit
 
-class ViewControllerFactory {
-    
-    func viewController(coordinatorType: CoordinatorType, _ coordinator: Coordinator) -> UIViewController {
+enum ViewControllerFactory {
+    static func viewController(coordinatorType: ScreenType, _ coordinator: Coordinator) -> UIViewController {
         switch coordinatorType {
         case .home:
-            let coordinator = coordinator as! HomeCoordinator
-            let viewModel = HomeViewModel(coordinator: coordinator)
+            let homeCoordinator = HomeCoordinator(UINavigationController())
+            coordinator.childCoordinators.append(homeCoordinator)
+//            coordinator.start()
+            let viewModel = HomeViewModel(coordinator: homeCoordinator)
             let viewController = HomeViewController(viewModel: viewModel)
-            viewController.tabBarItem = coordinator.tabBarItem
+            viewController.tabBarItem = TabBarItemFactory.createTabbarItem(screenType: coordinatorType)
             return viewController
         case .discover:
-            let coordinator = coordinator as! DiscoverCoordinator
-            let viewModel = DiscoverViewModel(coordinator: coordinator)
+            let discoverCoordinator = DiscoverCoordinator(UINavigationController())
+            coordinator.childCoordinators.append(discoverCoordinator)
+//            coordinator.start()
+            let viewModel = DiscoverViewModel(coordinator: discoverCoordinator)
             let viewController = DiscoverViewController(viewModel: viewModel)
-            viewController.tabBarItem = coordinator.tabBarItem
+            viewController.tabBarItem = TabBarItemFactory.createTabbarItem(screenType: coordinatorType)
             return viewController
         case .watchlist:
-            let coordinator = coordinator as! WatchlistCoordinator
-            let viewModel = WatchlistViewModel(coordinator: coordinator)
+            let watchlistCoordinator = WatchlistCoordinator(UINavigationController())
+            coordinator.childCoordinators.append(watchlistCoordinator)
+//            coordinator.start()
+            let viewModel = WatchlistViewModel(coordinator: watchlistCoordinator)
             let viewController = WatchlistViewController(viewModel: viewModel)
-            viewController.tabBarItem = coordinator.tabBarItem
+            viewController.tabBarItem = TabBarItemFactory.createTabbarItem(screenType: coordinatorType)
             return viewController
         case .search:
-            let coordinator = coordinator as! SearchCoordinator
-            let viewModel = SearchViewModel(coordinator: coordinator)
+            let searchCoordinator = SearchCoordinator(UINavigationController())
+            coordinator.childCoordinators.append(searchCoordinator)
+//            coordinator.start()
+            let viewModel = SearchViewModel(coordinator: searchCoordinator)
             let viewController = SearchViewController(viewModel: viewModel)
-            viewController.tabBarItem = coordinator.tabBarItem
+            viewController.tabBarItem = TabBarItemFactory.createTabbarItem(screenType: coordinatorType)
             return viewController
-        default:
-            fatalError("Coordinator type not supported")
         }
     }
 }

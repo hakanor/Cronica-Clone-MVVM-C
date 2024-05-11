@@ -8,7 +8,7 @@
 import UIKit
 
 protocol SearchCoordinating: Coordinator {
-    func showSearchViewController()
+    
 }
 
 class SearchCoordinator: SearchCoordinating {
@@ -17,25 +17,20 @@ class SearchCoordinator: SearchCoordinating {
     
     var childCoordinators: [Coordinator] = []
     
-    var type: CoordinatorType = .search
-    
-    var finishDelegate: CoordinatorFinishDelegate?
-    
-    var tabBarItem: UITabBarItem
-    
-    private let viewFactory = ViewControllerFactory()
-    
-    init(_ navigationController: UINavigationController, tabBarItem: UITabBarItem) {
+    init(_ navigationController: UINavigationController) {
         self.navigationController = navigationController
-        self.tabBarItem = tabBarItem
     }
     
     func start() {
         showSearchViewController()
     }
     
-    func showSearchViewController() {
-        let vc = viewFactory.viewController(coordinatorType: .search, self)
-        navigationController.pushViewController(vc, animated: true)
+    private func showSearchViewController() {
+        let searchCoordinator = SearchCoordinator(UINavigationController())
+        self.childCoordinators.append(searchCoordinator)
+        let viewModel = SearchViewModel(coordinator: searchCoordinator)
+        let viewController = SearchViewController(viewModel: viewModel)
+        viewController.tabBarItem = TabBarItemFactory.createTabbarItem(screenType: .search)
+        navigationController.pushViewController(viewController, animated: true)
     }
 }
