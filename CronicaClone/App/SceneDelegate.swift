@@ -10,17 +10,19 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
+    var coordinator: Coordinator?
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        
         guard let windowScene = (scene as? UIWindowScene) else { return }
-        window = UIWindow(frame: windowScene.coordinateSpace.bounds)
-        window?.windowScene = windowScene
         
-        // and now we should set rootViewController
-        window?.rootViewController = ViewController()
+        window = UIWindow(windowScene: windowScene)
+        
+        let navigationController = UINavigationController()
+        self.coordinator = AppCoordinator(navigationController)
+        self.coordinator?.start()
+        
+        window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
-        
     }
     
 }
