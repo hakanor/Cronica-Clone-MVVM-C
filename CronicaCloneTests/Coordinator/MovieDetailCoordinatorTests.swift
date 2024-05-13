@@ -14,15 +14,16 @@ class MovieDetailCoordinatorTests: XCTestCase {
     var navigationController: UINavigationController!
     
     override func setUp() {
+        super.setUp()
         navigationController = UINavigationController()
         let movie = "The Matrix"
         sut = MovieDetailCoordinator(navigationController, movie: movie)
-
     }
     
     override func tearDown() {
         navigationController = nil
         sut = nil
+        super.tearDown()
     }
     
     func test_didFinish_shouldRemoveChild() {
