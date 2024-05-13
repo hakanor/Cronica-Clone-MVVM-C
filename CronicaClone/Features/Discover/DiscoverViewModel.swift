@@ -16,7 +16,7 @@ protocol DiscoverViewModelInterface {
 
 final class DiscoverViewModel: DiscoverViewModelInterface {
 
-    weak var coordinator: DiscoverCoordinating?
+    var coordinator: DiscoverCoordinating?
     weak var delegate: DiscoverViewModelDelegate?
 
     init(coordinator: DiscoverCoordinating) {

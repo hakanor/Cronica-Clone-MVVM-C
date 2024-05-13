@@ -16,7 +16,7 @@ protocol HomeViewModelInterface {
 
 final class HomeViewModel: HomeViewModelInterface {
     
-    weak var coordinator: HomeCoordinating?
+    var coordinator: HomeCoordinating?
     weak var delegate: HomeViewModelDelegate?
     
     init(coordinator: HomeCoordinating) {

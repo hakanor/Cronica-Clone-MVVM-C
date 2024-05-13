@@ -16,7 +16,7 @@ protocol MovieDetailViewModelInterface {
 
 final class MovieDetailViewModel: MovieDetailViewModelInterface {
  
-    weak var coordinator: MovieDetailCoordinating?
+    var coordinator: MovieDetailCoordinating?
     weak var delegate: MovieDetailViewModelDelegate?
     
     var movie: String?
