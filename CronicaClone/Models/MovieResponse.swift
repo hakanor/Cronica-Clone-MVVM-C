@@ -7,8 +7,9 @@
 
 import Foundation
 
-struct MovieResponse: Decodable {
+struct MovieResponse: Decodable, Hashable {
     
+    let uuid = UUID()
     let page: Int
     let results: [Movie]
     let totalPages: Int
@@ -21,7 +22,9 @@ struct MovieResponse: Decodable {
         case totalResults = "total_results"
     }
 
-    struct Movie: Decodable {
+    struct Movie: Decodable, Hashable {
+        let uuid = UUID()
+        
         let adult: Bool
         let backdropPath: String?
         let genreIds: [Int]

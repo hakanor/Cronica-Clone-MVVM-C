@@ -8,7 +8,7 @@
 import UIKit
 
 protocol HomeCoordinating: Coordinator {
-    func showMovieDetailView(with movie: String)
+    func showMovieDetailView(with movie: MovieResponse.Movie)
 }
 
 class HomeCoordinator: HomeCoordinating {
@@ -32,7 +32,7 @@ class HomeCoordinator: HomeCoordinating {
         navigationController.viewControllers.append(viewController)
     }
     
-    func showMovieDetailView(with movie: String) {
+    func showMovieDetailView(with movie: MovieResponse.Movie) {
         let movieDetailCoordinator = MovieDetailCoordinator(navigationController, movie: movie)
         movieDetailCoordinator.parentCoordinator = self
         childCoordinators.append(movieDetailCoordinator)

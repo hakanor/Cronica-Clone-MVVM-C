@@ -8,7 +8,7 @@
 import UIKit
 
 protocol DiscoverCoordinating: Coordinator {
-    
+    func showMovieDetailView(with movie: MovieResponse.Movie)
 }
 
 class DiscoverCoordinator: DiscoverCoordinating {
@@ -30,6 +30,13 @@ class DiscoverCoordinator: DiscoverCoordinating {
         let viewModel = DiscoverViewModel(coordinator: self)
         let viewController = DiscoverViewController(viewModel: viewModel)
         navigationController.viewControllers.append(viewController)
+    }
+    
+    func showMovieDetailView(with movie: MovieResponse.Movie) {
+        let movieDetailCoordinator = MovieDetailCoordinator(navigationController, movie: movie)
+        movieDetailCoordinator.parentCoordinator = self
+        childCoordinators.append(movieDetailCoordinator)
+        movieDetailCoordinator.start()
     }
     
     deinit {

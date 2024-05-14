@@ -7,13 +7,14 @@
 
 import Foundation
 
-struct CreditsResponse: Decodable {
-    
+struct CreditsResponse: Decodable, Hashable {
     var id: Int
     var cast: [Person]
     var crew: [Person]
     
-    struct Person: Decodable {
+    struct Person: Decodable, Hashable {
+        let uuid = UUID()
+        
         let adult: Bool
         let gender: Int
         let id: Int

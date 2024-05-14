@@ -12,6 +12,7 @@ enum HTTPError: Error {
     case invalidResponse
     case noData
     case serializationError
+    case unknown
     
     var localizedDescription: String {
         switch self {
@@ -20,6 +21,7 @@ enum HTTPError: Error {
         case .invalidResponse: return "Invalid Response"
         case .noData: return "No data"
         case .serializationError: return "Failed to decode data"
+        case .unknown: return "Unknown error occured"
         }
     }
 }

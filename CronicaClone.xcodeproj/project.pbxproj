@@ -44,6 +44,13 @@
 		A7D0DF392BF2499800A03E43 /* MovieServiceImplTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D0DF382BF2499800A03E43 /* MovieServiceImplTests.swift */; };
 		A7D0DF3B2BF24A1400A03E43 /* MockHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D0DF3A2BF24A1400A03E43 /* MockHTTPClient.swift */; };
 		A7D0DF3D2BF2612800A03E43 /* CreditsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D0DF3C2BF2612800A03E43 /* CreditsResponse.swift */; };
+		A7D0DF3F2BF27B6600A03E43 /* MovieDiffableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D0DF3E2BF27B6600A03E43 /* MovieDiffableDataSource.swift */; };
+		A7D0DF412BF27E5D00A03E43 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D0DF402BF27E5D00A03E43 /* MovieCell.swift */; };
+		A7D0DF432BF2804B00A03E43 /* CollectionViewLayoutSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D0DF422BF2804B00A03E43 /* CollectionViewLayoutSection.swift */; };
+		A7D0DF452BF2A51800A03E43 /* SimpleHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D0DF442BF2A51800A03E43 /* SimpleHeaderView.swift */; };
+		A7D0DF482BF2D41800A03E43 /* CustomInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D0DF472BF2D41800A03E43 /* CustomInfoView.swift */; };
+		A7D7C64F2BF3AE7C0007123A /* CreditsDiffableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D7C64E2BF3AE7C0007123A /* CreditsDiffableDataSource.swift */; };
+		A7D7C6512BF3AEA70007123A /* PersonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D7C6502BF3AEA70007123A /* PersonCell.swift */; };
 		A7FE4E772BEFC41000D20323 /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FE4E762BEFC41000D20323 /* MovieDetailViewController.swift */; };
 		A7FE4E7B2BEFC44100D20323 /* ActorDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FE4E7A2BEFC44100D20323 /* ActorDetailViewController.swift */; };
 		A7FE4E7D2BEFC44C00D20323 /* MovieDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FE4E7C2BEFC44C00D20323 /* MovieDetailViewModel.swift */; };
@@ -114,6 +121,13 @@
 		A7D0DF382BF2499800A03E43 /* MovieServiceImplTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieServiceImplTests.swift; sourceTree = "<group>"; };
 		A7D0DF3A2BF24A1400A03E43 /* MockHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockHTTPClient.swift; sourceTree = "<group>"; };
 		A7D0DF3C2BF2612800A03E43 /* CreditsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsResponse.swift; sourceTree = "<group>"; };
+		A7D0DF3E2BF27B6600A03E43 /* MovieDiffableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDiffableDataSource.swift; sourceTree = "<group>"; };
+		A7D0DF402BF27E5D00A03E43 /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
+		A7D0DF422BF2804B00A03E43 /* CollectionViewLayoutSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewLayoutSection.swift; sourceTree = "<group>"; };
+		A7D0DF442BF2A51800A03E43 /* SimpleHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleHeaderView.swift; sourceTree = "<group>"; };
+		A7D0DF472BF2D41800A03E43 /* CustomInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInfoView.swift; sourceTree = "<group>"; };
+		A7D7C64E2BF3AE7C0007123A /* CreditsDiffableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsDiffableDataSource.swift; sourceTree = "<group>"; };
+		A7D7C6502BF3AEA70007123A /* PersonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCell.swift; sourceTree = "<group>"; };
 		A7FE4E762BEFC41000D20323 /* MovieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
 		A7FE4E7A2BEFC44100D20323 /* ActorDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActorDetailViewController.swift; sourceTree = "<group>"; };
 		A7FE4E7C2BEFC44C00D20323 /* MovieDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewModel.swift; sourceTree = "<group>"; };
@@ -173,6 +187,7 @@
 		A70B3F542BEE329600B975B0 /* CronicaClone */ = {
 			isa = PBXGroup;
 			children = (
+				A7D0DF462BF2D3FD00A03E43 /* CustomViews */,
 				A70B3F8B2BEE34EC00B975B0 /* App */,
 				A70B3F8A2BEE34E400B975B0 /* Features */,
 				A70B3F8C2BEE351600B975B0 /* Coordinator */,
@@ -209,6 +224,9 @@
 		A70B3F852BEE34CA00B975B0 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				A7D0DF3E2BF27B6600A03E43 /* MovieDiffableDataSource.swift */,
+				A7D7C64E2BF3AE7C0007123A /* CreditsDiffableDataSource.swift */,
+				A7D0DF422BF2804B00A03E43 /* CollectionViewLayoutSection.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -372,6 +390,25 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		A7D0DF462BF2D3FD00A03E43 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				A7D0DF492BF2D44100A03E43 /* Cells */,
+				A7D0DF472BF2D41800A03E43 /* CustomInfoView.swift */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		A7D0DF492BF2D44100A03E43 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				A7D0DF402BF27E5D00A03E43 /* MovieCell.swift */,
+				A7D0DF442BF2A51800A03E43 /* SimpleHeaderView.swift */,
+				A7D7C6502BF3AEA70007123A /* PersonCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		A7FE4E782BEFC41400D20323 /* MovieDetail */ = {
 			isa = PBXGroup;
 			children = (
@@ -525,26 +562,33 @@
 				A70B3F942BEE5BDA00B975B0 /* AppCoordinator.swift in Sources */,
 				A70B3FB42BEE778D00B975B0 /* SearchCoordinator.swift in Sources */,
 				A74D275E2BF14BAD0033ECE7 /* Endpoint.swift in Sources */,
+				A7D0DF432BF2804B00A03E43 /* CollectionViewLayoutSection.swift in Sources */,
 				A70B3FB02BEE766B00B975B0 /* WatchlistViewModel.swift in Sources */,
 				A7D0DF372BF244C300A03E43 /* HTTPError.swift in Sources */,
 				A70B3FAC2BEE75E800B975B0 /* HomeViewModel.swift in Sources */,
 				A74D27542BF0F2AF0033ECE7 /* MovieService.swift in Sources */,
 				A70B3F8E2BEE3F2E00B975B0 /* Coordinator.swift in Sources */,
 				A7FE4E7F2BEFC45400D20323 /* ActorDetailViewModel.swift in Sources */,
+				A7D0DF3F2BF27B6600A03E43 /* MovieDiffableDataSource.swift in Sources */,
 				A7FE4E7D2BEFC44C00D20323 /* MovieDetailViewModel.swift in Sources */,
 				A74D27582BF13DEB0033ECE7 /* HTTPClient.swift in Sources */,
 				A7D0DF3D2BF2612800A03E43 /* CreditsResponse.swift in Sources */,
 				A70B3F562BEE329600B975B0 /* AppDelegate.swift in Sources */,
 				A70B3FA42BEE745300B975B0 /* SearchViewController.swift in Sources */,
 				A70B3FF82BEEE2A900B975B0 /* TabBarItemFactory.swift in Sources */,
+				A7D0DF412BF27E5D00A03E43 /* MovieCell.swift in Sources */,
+				A7D0DF482BF2D41800A03E43 /* CustomInfoView.swift in Sources */,
 				A70B3FA22BEE744C00B975B0 /* HomeViewController.swift in Sources */,
 				A70B3F582BEE329600B975B0 /* SceneDelegate.swift in Sources */,
 				A70B3FB22BEE767600B975B0 /* SearchViewModel.swift in Sources */,
+				A7D0DF452BF2A51800A03E43 /* SimpleHeaderView.swift in Sources */,
 				A7FE4E822BEFC55700D20323 /* MovieDetailCoordinator.swift in Sources */,
 				A70B3FA62BEE747800B975B0 /* WatchlistViewController.swift in Sources */,
+				A7D7C6512BF3AEA70007123A /* PersonCell.swift in Sources */,
 				A7FE4E842BEFCFB500D20323 /* MovieResponse.swift in Sources */,
 				A70B3F962BEE5FD300B975B0 /* HomeCoordinator.swift in Sources */,
 				A7FE4E7B2BEFC44100D20323 /* ActorDetailViewController.swift in Sources */,
+				A7D7C64F2BF3AE7C0007123A /* CreditsDiffableDataSource.swift in Sources */,
 				A7FE4E772BEFC41000D20323 /* MovieDetailViewController.swift in Sources */,
 				A70B3FB62BEE779700B975B0 /* WatchlistCoordinator.swift in Sources */,
 				A70B3FAE2BEE765E00B975B0 /* DiscoverViewModel.swift in Sources */,
