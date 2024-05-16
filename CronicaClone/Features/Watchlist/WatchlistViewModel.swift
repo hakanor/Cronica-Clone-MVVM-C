@@ -16,7 +16,7 @@ protocol WatchlistViewModelInterface {
 
 final class WatchlistViewModel: WatchlistViewModelInterface {
     
-    weak var coordinator: WatchlistCoordinating?
+    var coordinator: WatchlistCoordinating?
     weak var delegate: WatchlistViewModelDelegate?
     
     init(coordinator: WatchlistCoordinating) {

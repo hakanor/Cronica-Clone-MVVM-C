@@ -16,7 +16,7 @@ protocol ActorDetailViewModelInterface {
 
 final class ActorDetailViewModel: ActorDetailViewModelInterface {
     
-    weak var coordinator: ActorDetailCoordinating?
+    var coordinator: ActorDetailCoordinating?
     weak var delegate: ActorDetailViewModelDelegate?
     
     var actor: String?

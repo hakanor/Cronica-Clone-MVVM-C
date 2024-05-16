@@ -6,14 +6,15 @@
 //
 
 import XCTest
-
 @testable import CronicaClone
+
 class HomeCoordinatorTests: XCTestCase {
     
     var sut: HomeCoordinator!
     var navigationController: UINavigationController!
     
     override func setUp() {
+        super.setUp()
         navigationController = UINavigationController()
         sut = HomeCoordinator(navigationController)
     }
@@ -21,6 +22,7 @@ class HomeCoordinatorTests: XCTestCase {
     override func tearDown() {
         navigationController = nil
         sut = nil
+        super.tearDown()
     }
     
     func test_start() {

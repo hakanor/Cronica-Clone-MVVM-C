@@ -16,7 +16,7 @@ protocol SearchViewModelInterface {
 
 final class SearchViewModel: SearchViewModelInterface {
     
-    weak var coordinator: SearchCoordinating?
+    var coordinator: SearchCoordinating?
     weak var delegate: SearchViewModelDelegate?
     
     init(coordinator: SearchCoordinating) {

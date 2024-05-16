@@ -18,9 +18,9 @@ final class MovieDetailCoordinator: MovieDetailCoordinating {
     var childCoordinators: [Coordinator] = []
     var parentCoordinator: Coordinator?
     
-    var movie: String
+    var movie: MovieResponse.Movie
 
-    init(_ navigationController: UINavigationController, movie: String) {
+    init(_ navigationController: UINavigationController, movie: MovieResponse.Movie) {
         self.navigationController = navigationController
         self.movie = movie
     }
@@ -29,7 +29,7 @@ final class MovieDetailCoordinator: MovieDetailCoordinating {
         showMovieDetailViewController(with: movie)
     }
 
-    private func showMovieDetailViewController(with movie: String) {
+    private func showMovieDetailViewController(with movie: MovieResponse.Movie) {
         let viewModel = MovieDetailViewModel(coordinator: self)
         let viewController = MovieDetailViewController(viewModel: viewModel)
         viewModel.movie = movie
